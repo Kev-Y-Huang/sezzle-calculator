@@ -5,8 +5,6 @@ import { useList } from 'react-firebase-hooks/database';
 function History() {
     const [snapshots, loading, error] = useList(app.database().ref("submissions"));
 
-    console.log(snapshots)
-
     return (
       <Box>
           {error && error ? (
